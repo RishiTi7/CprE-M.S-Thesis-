@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Threat attacks}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Shoulder Surfing} \\
+    This involves an attacker observing a user entering their password or PIN. Despite the number pad being jumbled, a keen observer might deduce the pattern based on finger movements, especially if they can make multiple observations over time.
+    
+    \item \textbf{Smudge Attacks} \\
+    Attackers can analyze smudge marks on the device's screen left by oily residues from fingers to infer commonly used keys or patterns. Even with a jumbled keypad, repeated entries might leave discernible traces that could be exploited.
+    
+    \item \textbf{Brute Force Attacks} \\
+    An attacker could systematically attempt every possible combination to gain access. While the jumbled keypad introduces a layer of complexity, a machine learning model that’s not properly calibrated might still be vulnerable to such exhaustive methods, especially if there's no lockout mechanism after several failed attempts.
+    
+    \item \textbf{Machine Learning Model Poisoning} \\
+    If the system adapts and learns from ongoing user behavior, an attacker with access to the learning data might inject malicious data, skewing the model's learning process and potentially allowing unauthorized access.
+    
+    \item \textbf{Reverse Engineering the ML Model} \\
+    An attacker might try to reverse engineer the machine learning model to understand its decision-making process. This could involve probing the system with various inputs to infer patterns or vulnerabilities in how it validates authentication attempts.
+    
+    \item \textbf{Spoofing Attacks} \\
+    This involves mimicking a legitimate user's behavior. If the attacker can accurately replicate the timing, pressure, and pattern of the legitimate user's interactions with the jumbled keypad, they might fool the system.
+    
+    \item \textbf{Replay Attacks} (depends) \\
+    An attacker could capture legitimate authentication data (like a sequence of key presses, timings, and pressures) and replay them to gain unauthorized access. This threat is particularly relevant if data transmission between the user interface and the authentication system isn't securely encrypted.
+    
+    \item \textbf{Social Engineering} \\
+    Attackers might use social engineering techniques to trick users into revealing their passwords or other authentication-related information. While not a direct attack on the system, its effectiveness could compromise overall security.
+\end{enumerate}
+
+\section*{Attack Models}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Observation Attack Model}
+    \begin{itemize}
+        \item Shoulder Surfing: Attacker observes the user entering their credentials to learn the password or deduce the pattern of key entries on the jumbled keypad.
+        \item Visual Recording: Use of hidden cameras or other recording devices to capture the user's authentication process.
+    \end{itemize}
+    
+    \item \textbf{Analytical Attack Model}
+    \begin{itemize}
+        \item Smudge Analysis: Examining the touchscreen for oily residues left by fingers to infer frequently used keys or swipe paths.
+        \item Pattern Analysis: Analyzing the timing and sequence of key entries to identify likely passwords or PINs, even without knowing the exact keypad layout.
+    \end{itemize}
+    
+    \item \textbf{Algorithmic Attack Model}
+    \begin{itemize}
+        \item Brute Force Attack: Systematically trying all possible combinations to guess the correct password. The complexity might be reduced if the attacker gains insights into the machine learning model's behavior or user habits.
+        \item Dictionary Attack: Using a precompiled list of common passwords, PINs, or observed patterns specific to the target user or user group.
+    \end{itemize}
+    
+    \item \textbf{Machine Learning-Based Attack Model}
+    \begin{itemize}
+        \item Model Inversion Attacks: Attacker aims to reverse-engineer the machine learning model to understand its decision-making process, exploiting weaknesses in the model's architecture or training data.
+        \item Adversarial Machine Learning: Crafting input data that is designed to fool the machine learning model into making incorrect predictions or classifications, potentially allowing unauthorized access.
+    \end{itemize}
+    
+    \item \textbf{Physical Attack Model}
+    \begin{itemize}
+        \item Direct Device Manipulation: Gaining physical access to the device to bypass authentication mechanisms, possibly through hardware modifications or exploiting physical vulnerabilities.
+        \item Side-Channel Attacks: Exploiting indirect information leakage from the physical device, such as power consumption, electromagnetic emissions, or acoustic signals, to deduce sensitive information.
+    \end{itemize}
+    
+    \item \textbf{Network-Based Attack Model}
+    \begin{itemize}
+        \item Man-in-the-Middle Attack (MitM): Intercepting communication between the authentication system and the server to capture or manipulate authentication data.
+        \item Replay Attacks: Capturing legitimate authentication data and retransmitting it to gain unauthorized access.
+    \end{itemize}
+    
+    \item \textbf{Social Engineering Attack Model}
+    \begin{itemize}
+        \item Phishing: Tricking users into revealing their passwords or security-related information through deceptive emails or websites.
+        \item Pretexting: Creating a fabricated scenario or pretext to engage with the user and extract sensitive authentication information.
+    \end{itemize}
+    
+    \item \textbf{Insider Threat Model}
+    \begin{itemize}
+        \item Malicious Insider: An authorized user with malicious intent exploits their access to manipulate or bypass the authentication system.
+        \item Accidental Insider: Unintentional actions by legitimate users, such as sharing passwords or leaving devices unlocked, that compromise system security.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}

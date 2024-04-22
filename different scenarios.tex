@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Different Scenarios}
+
+\subsection*{Scenario 1: Jumbled QWERTY Alphabet keyboard training}
+
+\textbf{Approach:}
+Implementing an alphabet keyboard password typing based user patterns to analyze the legitimacy of the user.
+Collect behavioral biometrics, such as typing speed, dwell time (time spent on each key), flight time (time between key presses), and pressure applied to each key. Pixel measurement. Surface area covered. (research papers)
+Xiomi, Vivo, Oppo, Oneplus.
+
+\textbf{Technologies:}
+\begin{itemize}[label=--,leftmargin=*]
+    \item Keystroke Dynamics Analysis using RNNs (Recurrent Neural Networks) to model the temporal sequence of key presses.
+    \item Pressure Sensitivity Analysis using sensors available in modern touchscreens to measure the intensity of each touch.
+\end{itemize}
+
+\subsection*{Scenario 2: Behavioral Biometrics with Dynamic Keypad}
+
+\textbf{Approach:}
+Use a dynamic, jumbled keypad for each login attempt, where the position of the digits changes randomly.
+Collect behavioral biometrics, such as typing speed, dwell time (time spent on each key), flight time (time between key presses), and pressure applied to each key.
+
+\textbf{Technologies:}
+\begin{itemize}[label=--,leftmargin=*]
+    \item Keystroke Dynamics Analysis using RNNs (Recurrent Neural Networks) to model the temporal sequence of key presses.
+    \item Pressure Sensitivity Analysis using sensors available in modern touchscreens to measure the intensity of each touch.
+\end{itemize}
+
+\subsection*{Scenario 3: Multi-Modal Authentication System (future)}
+
+\textbf{Approach:}
+Combine the jumbled number pad authentication with other modalities, such as facial recognition or fingerprint scanning, to create a multi-modal system.
+Use machine learning to analyze the combined probability scores from each modality to make a final authentication decision.
+
+\textbf{Technologies:}
+\begin{itemize}[label=--,leftmargin=*]
+    \item Implementation of Convolutional Neural Networks (CNNs) for facial recognition.
+    \item Sensor Fusion techniques to integrate data from different sources (e.g., touchscreen, camera, fingerprint sensor) effectively.
+\end{itemize}
+
+\subsection*{Scenario 4: Adversarial Machine Learning for Enhanced Security}
+
+\textbf{Approach:}
+Employ adversarial machine learning techniques to continuously test and improve the security of the authentication system.
+Generate adversarial examples to simulate potential attack vectors and use them to train the model, enhancing its ability to withstand real-world attacks.
+
+\textbf{Technologies:}
+\begin{itemize}[label=--,leftmargin=*]
+    \item Adversarial Training Frameworks to generate and defend against adversarial attacks.
+    \item Robust Machine Learning Models that can generalize well from both authentic and adversarial data.
+\end{itemize}
+
+\subsection*{Scenario 5: Context-Aware Authentication}
+
+\textbf{Approach:}
+Integrate contextual information, such as location, time of day, and device usage patterns, into the authentication decision-making process.
+Adjust the authentication requirements based on the assessed risk level, potentially simplifying the process in trusted environments.
+
+\textbf{Technologies:}
+\begin{itemize}[label=--,leftmargin=*]
+    \item Contextual Analysis using Decision Trees or Bayesian Networks to infer the level of risk based on environmental factors.
+    \item Dynamic Security Policies that can adjust authentication challenges in real-time based on contextual analysis.
+\end{itemize}
+
+\end{document}
